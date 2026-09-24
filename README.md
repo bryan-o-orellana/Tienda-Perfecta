@@ -79,7 +79,7 @@ Example Report
 
 ## 📎 View Sample PDF Report
 
-The PDF included in this repository is provided as a portfolio example and uses sample/anonymized information.
+The PDF included in this repository is provided as a portfolio example and uses sample/anonymized information. [View PDF](TiendaPerfecta_Resumen.pdf)
 
 ## 📊 Evaluation Model
 
