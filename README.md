@@ -6,7 +6,7 @@ A web application designed to digitize, centralize, and simplify the monthly Per
 The application replaces a manual workflow based on Excel evaluations + photographic evidence + PowerPoint presentations with a single digital workflow that allows users to perform evaluations, attach evidence, calculate scores, and automatically generate a PDF report.
 
 ## 🎯 The Problem
-
+```
 The original process required Trade Marketing personnel to work across multiple tools:
 
 ┌──────────────┐
@@ -26,9 +26,8 @@ The original process required Trade Marketing personnel to work across multiple 
 │    Report    │
 └──────────────┘
 
-
 This involved repetitive manual work and made it difficult to maintain the evaluation whenever questions or scoring criteria changed.
-
+```
 ## 💡 The Solution
 
 The Perfect Store Evaluation application brings the entire process into one platform:
@@ -58,21 +57,31 @@ Feature	Description
 📸 Photo Evidence	Attach photographic evidence to the evaluation
 📄 PDF Reports	Generate a complete evaluation summary automatically
 🔗 OLAP Integration	Retrieve business information from company OLAP sources
-📸 Application Preview
-01 — Application
-<img src="screenshots/1.png" width="900">
-02 — Store Evaluation
-<img src="screenshots/2.png" width="900">
-03 — Evaluation Questionnaire
-<img src="screenshots/3.png" width="900">
-04 — Evaluation Results
-<img src="screenshots/4.png" width="900">
-05 — Report / Evidence
-<img src="screenshots/5.png" width="900">
+
+## 📸 Application Preview
+01 — Dashboard - General view of the evaluations
+
+<img src="screenshots/1.png" width="600">
+
+02 — Questions, clients, assigned advisor (automatically extracted from the OLAP cube)
+
+<img src="screenshots/2.png" width="600">
+
+03 — Section for attaching photos at the end of the questionnaire
+
+<img src="screenshots/3.png" width="600">
+
+04 — History of evaluations conducted
+
+<img src="screenshots/4.png" width="600">
+
+05 — Section for modifying/changing the questions
+
+<img src="screenshots/5.png" width="600">
+
 ## 📄 Generated Report
 
 One of the main objectives of the application is to eliminate the need to manually create a PowerPoint presentation after completing an evaluation.
-
 The application automatically generates a PDF summary containing the evaluation results and photographic evidence.
 
 Example Report
@@ -82,9 +91,8 @@ Example Report
 The PDF included in this repository is provided as a portfolio example and uses sample/anonymized information. [View PDF](TiendaPerfecta_Resumen.pdf)
 
 ## 📊 Evaluation Model
-
+```
 The evaluation is based on a configurable set of questions, typically 15–18 questions covering different aspects of brand execution within the store.
-
 Each question can have its own weighting, while the total evaluation is normalized to 100%.
 
 For example:
@@ -99,10 +107,8 @@ Question 07  ─────────── 10%
 Question 08  ─────────── 15%
                     ─────────
                        100%
-
-
 This makes the evaluation model flexible and allows the business criteria to evolve without requiring changes to the application's core workflow.
-
+```
 ## 🏗️ Architecture
 
 The application follows a separated frontend/backend architecture:
@@ -126,28 +132,17 @@ The application follows a separated frontend/backend architecture:
                     └─────────────────────┘
 
 ## Frontend
-
 The web directory contains the user interface and evaluation workflow.
 
 ## Backend
-
 The api directory contains the application's business logic, data processing, scoring calculations, and report generation.
-
-Enterprise Data Integration
-
 The application was designed to connect to the company's OLAP cubes to retrieve information such as:
-
-Customers
-
-Sales advisors
-
-Customer/advisor relationships
-
-Other relevant business information
+Customers, Sales advisors, Customer/advisor relationships, Other relevant business information
 
 Because these data sources belong to the company's internal infrastructure, the production data integration is not publicly accessible.
 
 ## 📁 Project Structure
+```
 perfect-store-evaluation/
 │
 ├── api/                    # Backend / API
@@ -165,12 +160,12 @@ perfect-store-evaluation/
 │
 ├── .gitignore
 └── README.md
-
+```
 ## 🧩 Business Workflow
-
+```
 The application was designed around the actual workflow used by Trade Marketing teams:
 
-Before
+### Before
 Excel
   │
   ├── Manual evaluation
@@ -187,17 +182,9 @@ PowerPoint
   ├── Copy photos
   └── Format presentation
 
-With the Application
-                    ┌───────────────┐
-                    │    Customer   │
-                    └───────┬───────┘
-                            ↓
+###  With the Application
                     ┌───────────────┐
                     │ Sales Advisor │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │     Store     │
                     └───────┬───────┘
                             ↓
                     ┌───────────────┐
@@ -209,92 +196,42 @@ With the Application
                     └───────┬───────┘
                             ↓
                     ┌───────────────┐
-                    │ Automatic     │
+                    │   Automatic   │
                     │    Scoring    │
                     └───────┬───────┘
                             ↓
                     ┌───────────────┐
+                    │  Automatic    │
                     │  PDF Report   │
                     └───────────────┘
-
-## 🛠️ Technology & Architecture
-
-The project is organized into two main applications:
-
-Frontend
-
-Web-based user interface
-
-Dynamic evaluation forms
-
-Store evaluation workflow
-
-Question configuration
-
-Backend
-
-API
-
-Business logic
-
-Score calculation
-
-Report generation
-
-Enterprise data integration
-
-Data
-
-OLAP cube integration
-
-Customer information
-
-Sales advisor information
-
+```
 ## 🔐 Data & Privacy
 
 This repository is intended as a portfolio demonstration.
-
 The production application integrates with internal company data sources that are not publicly accessible.
-
 For that reason:
-
 No company credentials are included.
-
 No production connection strings are included.
-
 Screenshots and sample reports should contain only anonymized or non-sensitive information.
-
 The OLAP integration shown in the architecture represents the production environment but is not publicly accessible.
 
 ## 🚀 Future Improvements
-
 Potential future enhancements include:
 
 🔐 Authentication and role-based access
-
 📊 Historical evaluation dashboards
-
 📈 Store and advisor performance tracking
-
 📧 Automatic distribution of reports
-
 ☁️ Cloud deployment
-
 📱 Mobile optimization for store visits
-
 📴 Offline evaluation capabilities
-
 📊 Historical comparison between evaluations
 
 ## 🤖 Development
-
 This project was developed with the assistance of Claude, using an iterative development approach to design, implement, and refine the application.
-
 The main objective was to transform an existing manual business process into a centralized digital workflow while maintaining flexibility in the evaluation criteria and scoring model.
 
 ## 📌 Project Summary
-
 Project: Perfect Store Evaluation
 Area: Trade Marketing / Retail Execution
 Purpose: Digitalize store evaluation and reporting
