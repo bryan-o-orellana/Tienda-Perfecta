@@ -1,0 +1,14 @@
+{
+  "name": "tienda-perfecta-api",
+  "version": "0.1.0",
+  "description": "Mock de API (Node/Express) que respeta el contrato ExecutionResponse<T> del estandar .NET. Reemplazar por API .NET real usando esta misma forma de endpoints.",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}
