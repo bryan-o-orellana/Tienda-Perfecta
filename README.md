@@ -161,7 +161,7 @@ perfect-store-evaluation/
 │   ├── 4.png
 │   └── 5.png
 │
-├── sample-report.pdf       # Example generated report
+├── TiendaPerfecta_Resumen.pdf       # Example generated report
 │
 ├── .gitignore
 └── README.md
